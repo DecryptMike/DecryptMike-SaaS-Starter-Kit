@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #000000;
+  --foreground: #34d399;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Dark mode base */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #34d399;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Matrix-style glow animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px #34d399;
+  }
+  50% {
+    box-shadow: 0 0 15px #34d399;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Scrollbar Glow */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #34d399;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #34d399;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #34d399;
+  box-shadow: 0 0 15px #34d399;
+}
+
+/* Text Selection Glow */
+::selection {
+  background: #34d399;
+  color: #000000;
+}
+
+/* Custom Cursor */
+body {
+  cursor: url('/cursor-glow-green.png'), auto; /* Make sure this file exists in public/ */
+}
