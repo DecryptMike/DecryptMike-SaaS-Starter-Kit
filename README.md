@@ -14,13 +14,22 @@
 ## 📸 Screenshots and GIF previews 
 
 ### 🔐 Sign In Page
-![Sign In Page](path/to/signin.png)
+
+<p align="center">
+  <img src="DecryptMike Sign In Page.png" width="100%" alt="Sign In Page">
+</p>
 
 ### ✅ Dashboard (GIF Scroll Preview)
-![Dashboard GIF](path/to/dashboard-scroll.gif)
+
+<p align="center">
+  <img src="DecryptMike Saas Pro.gif" width="100%" alt="Log Analyzer in Action">
+</p>
 
 ### 🔒 Unauthorized Page
-![Unauthorized](path/to/unauthorized.png)
+
+<p align="center">
+  <img src="DecryptMike Unauthorized Page.png" width="100%" alt="Unauthorized Page">
+</p>
 
 ### 📉 Stripe Success / Cancel Pages
 ![Success Page](path/to/success.png)  
@@ -105,7 +114,6 @@ npm run dev
 
 All screenshots + GIFs can be found inside your `public/` folder or attached assets:
 
-- `/public/decryptmike-logo.png`
 - `/public/signin.png`
 - `/public/dashboard-scroll.gif`
 - `/public/unauthorized.png`
@@ -151,13 +159,27 @@ Visit [http://localhost:3000](http://localhost:3000) to view the app. Sign-in re
 
 ---
 
+## 🎯 Why I Built It
+
+This project was built to showcase real-world skills in full-stack development with a cybersecurity-focused SaaS kit. It’s designed for hiring managers, portfolio reviewers, and recruiters looking to assess:
+* Proficiency with authentication, RBAC, and secure data storage 
+* Experience integrating Stripe billing into a Next.js application 
+* Design and layout customization with Tailwind CSS 
+* Deployment and CI/CD using Vercel
+
+---
+
 ## ⚠️ Legal Disclaimer
 
 This tool is intended for **educational and authorized personal use only**.  
-Do not use it to store sensitive or production passwords without enhancements.
 
 ---
 
 ## 💻 Built by [@DecryptMike](https://github.com/DecryptMike)
 
 ---
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Built%20for-Cybersecurity-blue?style=for-the-badge&logo=python"/>
+  <img src="https://img.shields.io/badge/Made%20By-DecryptMike-limegreen?style=for-the-badge&logo=github"/>
+</p>
