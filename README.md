@@ -1,3 +1,14 @@
+![Next.js](https://img.shields.io/badge/Next.js-15-blue?logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3-06B6D4?logo=tailwindcss)
+![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?logo=prisma)
+![Stripe](https://img.shields.io/badge/Stripe-Billing-blueviolet?logo=stripe)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Supabase-4169E1?logo=postgresql)
+![Auth](https://img.shields.io/badge/Auth-NextAuth%20JWT-yellowgreen?logo=auth0)
+![Cyberpunk](https://img.shields.io/badge/UI-Cyberpunk%20Dashboard-green)
+![Deployed](https://img.shields.io/badge/Hosted%20on-Vercel-black?logo=vercel)
+
+
 <p align="center">
   <img src="DecryptMikeLogo.png" alt="DecryptMike Logo" style="max-width: 100%; height: auto;"/>
 </p>
@@ -180,6 +191,7 @@ This tool is intended for **educational and authorized personal use only**.
 ---
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Built%20for-Cybersecurity-blue?style=for-the-badge&logo=python"/>
+  <img src="https://img.shields.io/badge/Built%20For-Web%20Development-blue?style=for-the-badge&logo=next.js"/>
   <img src="https://img.shields.io/badge/Made%20By-DecryptMike-limegreen?style=for-the-badge&logo=github"/>
+  <img src="https://img.shields.io/badge/Inspired%20By-Cybersecurity-darkgreen?style=for-the-badge&logo=matrix"/>
 </p>
