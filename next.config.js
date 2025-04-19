@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    redirects: async () => {
+    async redirects() {
       return [
         {
           source: '/',
           destination: '/signin',
-          permanent: false, // temporary redirect to allow future changes
+          permanent: false, // Set to true if you want search engines to cache the redirect
         },
       ];
     },
