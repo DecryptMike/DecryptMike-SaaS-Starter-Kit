@@ -1,36 +1,163 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="DecryptMikeLogo.png" alt="DecryptMike Logo" style="max-width: 100%; height: auto;"/>
+</p>
 
-## Getting Started
+<h2 align="center">
+   🧠 DecryptMike SaaS Starter Kit
+</h2>
 
-First, run the development server:
+<h5 align="center">A production-ready SaaS Starter Kit with authentication, RBAC, Stripe billing, PostgreSQL, and a fully custom cyberpunk dashboard UI.
+</h5>
+
+---
+
+## 📸 Screenshots and GIF previews 
+
+### 🔐 Sign In Page
+![Sign In Page](path/to/signin.png)
+
+### ✅ Dashboard (GIF Scroll Preview)
+![Dashboard GIF](path/to/dashboard-scroll.gif)
+
+### 🔒 Unauthorized Page
+![Unauthorized](path/to/unauthorized.png)
+
+### 📉 Stripe Success / Cancel Pages
+![Success Page](path/to/success.png)  
+![Cancelled Page](path/to/cancelled.png)
+
+---
+
+## 📦 Features
+
+- 🔒 **NextAuth.js Authentication** (GitHub OAuth)
+- 📜 **RBAC** – Role-Based Access Control
+- 💳 **Stripe Billing** – Checkout + Customer Portal
+- 🧬 **PostgreSQL + Prisma ORM**
+- 🌐 **Vercel Ready** – One-click deploy
+- 💡 **Cyberpunk UI** with Matrix-style rain background
+- 📊 **Interactive Dashboard** (Total Revenue, Sales, User Growth, Activity)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 15 App Router (TypeScript)
+- **Styling:** Tailwind CSS, custom UI
+- **Auth:** NextAuth.js (JWT Strategy)
+- **DB:** Supabase PostgreSQL + Prisma ORM
+- **Payments:** Stripe Checkout & Portal
+- **Deployment:** Vercel
+
+---
+
+## 🧰 Project Structure
+
+```
+src/
+├── app/
+│   ├── dashboard/               # Dashboard page + subpages
+│   ├── signin/page.tsx         # Sign In Page
+│   ├── unauthorized/page.tsx   # Access Denied Page
+│   ├── api/
+│   │   ├── auth/[...nextauth]/route.ts  # Auth Route
+│   │   └── stripe/checkout/    # Stripe API Routes
+├── components/ui/              # Custom UI components
+├── lib/                        # Helpers (Prisma, Auth, etc)
+├── styles/                     # Global styles
+public/
+│   └── decryptmike-logo.png    # Brand Logo
+```
+
+---
+
+## 📄 Environment Variables
+
+Required in `.env.local`:
+```env
+GITHUB_ID=your_github_oauth_id
+GITHUB_SECRET=your_github_oauth_secret
+NEXTAUTH_SECRET=your_nextauth_secret
+NEXTAUTH_URL=https://your-vercel-domain.vercel.app
+NEXT_PUBLIC_APP_URL=https://your-vercel-domain.vercel.app
+STRIPE_SECRET_KEY=your_stripe_secret
+STRIPE_PUBLIC_KEY=your_stripe_public
+STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
+DATABASE_URL=your_postgres_database_url
+```
+
+---
+
+## 🔄 Setup Instructions
+
+```bash
+git clone https://github.com/DecryptMike/DecryptMike-SaaS-Starter-Kit.git
+cd DecryptMike-SaaS-Starter-Kit
+npm install
+npx prisma generate
+npx prisma db push
+npm run dev
+```
+
+---
+
+## 📸 Screenshots Reference
+
+All screenshots + GIFs can be found inside your `public/` folder or attached assets:
+
+- `/public/decryptmike-logo.png`
+- `/public/signin.png`
+- `/public/dashboard-scroll.gif`
+- `/public/unauthorized.png`
+- `/public/success.png`
+- `/public/cancelled.png`
+
+---
+
+## 🧪 Getting Started Locally
+
+First, clone the project and install dependencies:
+
+```bash
+git clone https://github.com/DecryptMike/DecryptMike-SaaS-Starter-Kit.git
+cd DecryptMike-SaaS-Starter-Kit
+npm install
+```
+
+Run your database migrations and generate the Prisma client:
+
+```bash
+npx prisma generate
+npx prisma db push
+```
+
+Then start the dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to view the app. Sign-in requires GitHub OAuth to be configured in `.env.local`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> _Pro Tip:_ The landing page redirects to `/signin`, and only authenticated users can view `/dashboard`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📌 Status
 
-To learn more about Next.js, take a look at the following resources:
+✅ Final build tested locally and pushed to GitHub and Vercel  
+❌ Currently debugging GitHub OAuth callback 404  
+🎯 Feature complete + ready for deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚠️ Legal Disclaimer
 
-## Deploy on Vercel
+This tool is intended for **educational and authorized personal use only**.  
+Do not use it to store sensitive or production passwords without enhancements.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💻 Built by [@DecryptMike](https://github.com/DecryptMike)
+
+---
