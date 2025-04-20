@@ -1,10 +1,10 @@
 import GitHubProvider from "next-auth/providers/github";
 import { NextAuthOptions } from "next-auth";
-import { PrismaAdapter } from "@next-auth/prisma-adapter";
+import { CustomPrismaAdapter } from "@/lib/customAdapter";
 import { prisma } from "@/lib/prisma";
 
 export const authOptions: NextAuthOptions = {
-  adapter: PrismaAdapter(prisma),
+  adapter: CustomPrismaAdapter(),
   providers: [
     GitHubProvider({
       clientId: process.env.GITHUB_ID!,
@@ -17,12 +17,13 @@ export const authOptions: NextAuthOptions = {
   },
   pages: {
     signIn: "/signin",
-    error: "/unauthorized", // Matrix-style error page
+    error: "/unauthorized",
   },
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        token.role = user.role || "user"; // ✅ Assign default role if missing
+        const adminEmail = "decryptmike@gmail.com"; // 🔁 Replace with YOUR GitHub email
+        token.role = user.email === adminEmail ? "admin" : "user";
       }
       return token;
     },
@@ -34,6 +35,6 @@ export const authOptions: NextAuthOptions = {
     },
     async redirect({ baseUrl }) {
       return `${baseUrl}/dashboard`;
-    }
-  }
+    },
+  },
 };
