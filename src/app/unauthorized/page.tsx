@@ -104,8 +104,8 @@ export default function UnauthorizedPage() {
         <Image
           src="/decryptmike-logo.png"
           alt="DecryptMike Logo"
-          width={80}
-          height={80}
+          width={75}
+          height={75}
           className="mb-5"
         />
 

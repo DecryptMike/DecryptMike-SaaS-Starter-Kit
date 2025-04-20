@@ -106,8 +106,8 @@ export default function SignInPage() {
         <Image
           src="/decryptmike-logo.png"
           alt="DecryptMike Logo"
-          width={80}
-          height={80}
+          width={75}
+          height={75}
           className="mb-5"
         />
 
@@ -116,7 +116,7 @@ export default function SignInPage() {
           className="text-2xl font-bold mb-4 text-center"
           style={{ color: "#34d399", textShadow: "0 0 8px #34d399" }}
         >
-          Sign in to Decrypt Mike
+          Sign In To Decrypt Mike
         </h1>
 
         {/* GitHub Button */}
@@ -124,7 +124,7 @@ export default function SignInPage() {
         onClick={() => signIn("github")}
         className="cursor-none mt-2 px-4 py-2 text-sm font-medium rounded bg-[#34d399] text-black hover:bg-emerald-400 transition"
         >
-         Sign in with GitHub
+         Sign In with GitHub
         </button>
       </div>
     </div>

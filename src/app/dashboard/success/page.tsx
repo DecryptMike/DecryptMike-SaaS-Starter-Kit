@@ -15,7 +15,7 @@ export default function SuccessPage() {
           Subscription Successful
         </h1>
         <p className="text-[#34d399] text-lg mb-6">
-          Welcome to behind the scenes of DecryptMike!
+          Welcome To Behind The Scenes Of Decrypt Mike!
         </p>
 
         <Link href="/dashboard">
@@ -31,7 +31,7 @@ export default function SuccessPage() {
               e.currentTarget.style.color = "#34d399";
             }}
           >
-            Return to Dashboard
+            Return To Dashboard
           </button>
         </Link>
       </div>

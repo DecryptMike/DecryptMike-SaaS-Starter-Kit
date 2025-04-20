@@ -99,8 +99,8 @@ export default function HomePage() {
         <Image
           src="/decryptmike-logo.png"
           alt="DecryptMike Logo"
-          width={80}
-          height={80}
+          width={75}
+          height={75}
           className="mx-auto mb-5"
         />
 
@@ -116,7 +116,7 @@ export default function HomePage() {
   <button
     className="cursor-none mt-2 px-4 py-2 text-sm font-medium rounded bg-[#34d399] text-black shadow-md hover:bg-emerald-400 transition"
   >
-    Sign in to Continue
+    Sign In To Continue
   </button>
 </Link>
 
