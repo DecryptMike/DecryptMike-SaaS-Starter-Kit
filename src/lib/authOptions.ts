@@ -20,7 +20,10 @@ export const authOptions: NextAuthOptions = {
     error: "/unauthorized", // Matrix-style error page
   },
   callbacks: {
-    async jwt({ token, user: _ }) {
+    async jwt({ token, user }) {
+      if (user) {
+        token.role = user.role;
+      }
       return token;
     },
     async session({ session, token }) {
@@ -29,8 +32,8 @@ export const authOptions: NextAuthOptions = {
       }
       return session;
     },
-    async redirect({ baseUrl, url: _ }) {
+    async redirect({ baseUrl }) {
       return `${baseUrl}/dashboard`;
     }
-  },
+  }
 };
