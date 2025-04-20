@@ -126,7 +126,7 @@ npm run dev
 
 ---
 
-## 📸 Screenshots Reference
+## 📸 Screenshot References
 
 All screenshots + GIFs can be found inside your `public/` folder or attached assets:
 
