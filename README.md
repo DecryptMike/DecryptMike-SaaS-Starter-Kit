@@ -22,7 +22,7 @@
 
 ---
 
-## 📸 Screenshots and GIF previews 
+## 📸 Screenshots / GIF Preview 
 
 ### 🔐 Sign In Page
 
