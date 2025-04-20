@@ -1,10 +1,8 @@
-// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    serverActions: true,
-    appDir: true
-  }
+    serverActions: {}, // ✅ must be an object
+  },
 };
 
 module.exports = nextConfig;

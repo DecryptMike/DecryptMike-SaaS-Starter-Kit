@@ -15,11 +15,12 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt",
   },
+  pages: {
+    signIn: "/signin",
+    error: "/unauthorized", // Matrix-style error page
+  },
   callbacks: {
-    async jwt({ token, user }) {
-      if (user) {
-        token.role = user.role;
-      }
+    async jwt({ token, user: _ }) {
       return token;
     },
     async session({ session, token }) {
@@ -28,8 +29,8 @@ export const authOptions: NextAuthOptions = {
       }
       return session;
     },
-    async redirect({ baseUrl }) {
+    async redirect({ baseUrl, url: _ }) {
       return `${baseUrl}/dashboard`;
-    }    
+    }
   },
 };
