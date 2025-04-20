@@ -43,8 +43,13 @@
 </p>
 
 ### 📉 Stripe Success / Cancel Pages
-![Success Page](path/to/success.png)  
-![Cancelled Page](path/to/cancelled.png)
+
+<p align="center">
+  <img src="DecryptMike Successful.png" width="100%" alt="Stripe Success Page">
+</p>
+<p align="center">
+  <img src="DecryptMike Canceled.png" width="100%" alt="Stripe Canceled Page">
+</p>
 
 ---
 
