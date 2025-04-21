@@ -1,6 +1,7 @@
-// src/lib/auth.ts
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/authOptions";
+import { authOptions as options } from "@/lib/authOptions";
 
-// ✅ This is the only export needed here
-export const auth = () => getServerSession(authOptions);
+export const auth = () => getServerSession(options);
+
+// ✅ Add this export so NextAuth API route can use it
+export { options as authOptions };
