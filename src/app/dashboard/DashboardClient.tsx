@@ -3,7 +3,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { getCurrentUser } from "@/lib/getCurrentUser";
 import CheckoutButton from "@/components/ui/CheckoutButton";
-import { signOut } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import {
   AreaChart,
   Area,
@@ -31,9 +31,15 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 
 const DashboardClient = () => {
+  const { data: session, status } = useSession();
   const [role, setRole] = useState<string | null>(null);
   const [user, setUser] = useState<any>(null);
   const [activity, setActivity] = useState<string[]>([]);
+
+  useEffect(() => {
+    console.log("🧠 Session Info:", session);
+    console.log("📡 Status:", status);
+  }, [session, status]);
 
   useEffect(() => {
     async function fetchUser() {
@@ -44,17 +50,6 @@ const DashboardClient = () => {
       }
     }
     fetchUser();
-  }, []);
-
-  useEffect(() => {
-    const fetchActivity = async () => {
-      const res = await fetch("/api/activity");
-      if (res.ok) {
-        const data = await res.json();
-        setActivity(data);
-      }
-    };
-    fetchActivity();
   }, []);
 
   const growthData = [
