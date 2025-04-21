@@ -121,11 +121,11 @@ export default function SignInPage() {
 
         {/* GitHub Button */}
         <button
-        onClick={() => signIn("github")}
-        className="cursor-none mt-2 px-4 py-2 text-sm font-medium rounded bg-[#34d399] text-black hover:bg-emerald-400 transition"
-        >
-         Sign In With Github
-        </button>
+  onClick={() => signIn("github", { callbackUrl: "/dashboard" })}
+  className="cursor-none mt-2 px-4 py-2 text-sm font-medium rounded bg-[#34d399] text-black hover:bg-[#2dd4bf]"
+>
+  Sign In With Github
+</button>
       </div>
     </div>
   );
