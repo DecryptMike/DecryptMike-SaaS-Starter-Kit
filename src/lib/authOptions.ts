@@ -21,7 +21,7 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        const adminEmail = "decryptmike@gmail.com"; // 🔁 Replace with YOUR GitHub email
+        const adminEmail = "decryptmike@gmail.com"; 
         token.role = user.email === adminEmail ? "admin" : "user";
       }
       return token;
