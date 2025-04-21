@@ -1,5 +1,5 @@
 // src/lib/rbac.ts
-import { getCurrentUserWithRole } from "@/lib/auth";
+import { getCurrentUserWithRole } from "@/lib/getCurrentUserWithRole"; ✅
 import { redirect } from "next/navigation";
 
 export const requireRole = async (allowedRoles: string[]) => {
