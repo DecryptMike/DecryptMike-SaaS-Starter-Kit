@@ -1,15 +1,13 @@
-// src/lib/rbac.ts
+import { redirect } from "next/navigation";
 import { getCurrentUser } from "@/lib/getCurrentUser";
 
 export async function requireRole(roles: string[]) {
   const user = await getCurrentUser();
 
-  if (!user) {
-    throw new Error("Unauthorized: No session");
-  }
+  console.log("🔐 Fetched User:", user); // ✅ Debug line
 
-  if (!roles.includes(user.role)) {
-    throw new Error("Unauthorized: Insufficient role");
+  if (!user || !roles.includes(user.role)) {
+    return redirect("/unauthorized");
   }
 
   return user;
