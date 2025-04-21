@@ -7,12 +7,15 @@ import DashboardClient from "./DashboardClient";
 export default async function Dashboard() {
   const session = await getServerSession(authOptions);
 
+  console.log("🧠 Server Session:", session); // 🔍 Check if session exists
+
   if (!session) {
-    redirect("/signin");
+    console.log("❌ No session found. Redirecting...");
+    return redirect("/signin");
   }
 
-  // ✅ Require the user to have "admin" or "user" role
-  await requireRole(["admin", "user"]);
+  const user = await requireRole(["admin", "user"]);
+  console.log("✅ Authorized User:", user); // 🔍 Check if role passed
 
   return <DashboardClient />;
 }
