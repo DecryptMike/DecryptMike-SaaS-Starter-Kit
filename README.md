@@ -24,6 +24,13 @@
 
 ## 📸 Screenshots / GIF Preview 
 
+### ⛔️ Restricted Page 
+
+<p align="center">
+  <img src="DecryptMike Access.png" width="100%" alt="Sign In Page">
+</p>
+
+
 ### 🔐 Sign In Page
 
 <p align="center">
