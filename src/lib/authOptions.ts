@@ -1,6 +1,6 @@
 import GitHubProvider from "next-auth/providers/github";
 import { NextAuthOptions } from "next-auth";
-import { CustomPrismaAdapter } from "@/lib/customAdapter";
+import { CustomPrismaAdapter } from "../lib/customAdapter";
 
 export const authOptions: NextAuthOptions = {
   adapter: CustomPrismaAdapter(),
@@ -21,13 +21,15 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        const adminEmail = "decryptmike@gmail.com"; 
+        console.log("🔐 JWT Callback:", user.email);
+        const adminEmail = "decryptmike@gmail.com";
         token.role = user.email === adminEmail ? "admin" : "user";
       }
       return token;
     },
     async session({ session, token }) {
       if (session.user) {
+        console.log("📦 Session Callback:", token.role);
         session.user.role = token.role as string;
       }
       return session;

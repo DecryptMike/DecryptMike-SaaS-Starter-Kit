@@ -8,10 +8,14 @@ export function middleware(req: NextRequest) {
 
   const isAuthPage = pathname === "/signin";
 
-  // Redirect unauthenticated users away from protected routes
   if (!token && !isAuthPage && pathname.startsWith("/dashboard")) {
     return NextResponse.redirect(new URL("/signin", req.url));
   }
 
   return NextResponse.next();
 }
+
+// Don't run middleware on API/auth routes
+export const config = {
+  matcher: ["/dashboard/:path*", "/"],
+};

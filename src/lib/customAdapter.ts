@@ -12,9 +12,16 @@ export function CustomPrismaAdapter(): Adapter {
     ...originalAdapter,
     async createUser(data: CustomUser) {
       const role = data.role ?? "user";
+      const { email, name, image, emailVerified } = data;
+
+      if (!email) throw new Error("Email is required for user creation");
+
       return prisma.user.create({
         data: {
-          ...data,
+          email,
+          name,
+          image,
+          emailVerified,
           role,
         },
       });
