@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    serverActions: {
-      // Add your specific configurations here
-    },
+    serverActions: {},
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/api/auth/:slug*",
+        destination: "/api/auth/github",
+      },
+    ];
   },
 };
 

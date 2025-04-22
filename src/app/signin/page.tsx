@@ -121,7 +121,7 @@ export default function SignInPage() {
 
         {/* GitHub Button */}
         <button
-  onClick={() => signIn("github", { callbackUrl: "/dashboard" })}
+  onClick={() => signIn("github", { callbackUrl: "/dashboard", redirect: true })}
   className="cursor-none mt-2 px-4 py-2 text-sm font-medium rounded bg-[#34d399] text-black hover:bg-[#2dd4bf]"
 >
   Sign In With Github
