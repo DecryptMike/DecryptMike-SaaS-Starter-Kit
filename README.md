@@ -7,6 +7,7 @@
 ![Auth](https://img.shields.io/badge/Auth-NextAuth%20JWT-yellowgreen?logo=auth0)
 ![Cyberpunk](https://img.shields.io/badge/UI-Cyberpunk%20Dashboard-green)
 ![Deployed](https://img.shields.io/badge/Hosted%20on-Vercel-black?logo=vercel)
+![License](https://img.shields.io/github/license/DecryptMike/DecryptMike-Web-Vuln-Scanner)
 
 
 <p align="center">
